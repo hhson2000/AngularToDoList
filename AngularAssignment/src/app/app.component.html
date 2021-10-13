@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="col-6 mx-auto m-5">
+        <div class="header">
+            <h4>Todo List</h4>
+            <p>Enter input field to add item to your list</p>
+            <p>Click buuton delete to delete to your list</p>
+            <p>Click buton complete to mark your completed task</p>
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control" #taskName>
+            <button class="btn btn-primary" (click)="addTask(taskName.value)"><i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
+        </div>
+        <app-item [todoItem]="todo" (deleteTask)="removeTask($event)" (changeStatus)="changeStatusTask($event)"></app-item>
+    </div>
+</div>

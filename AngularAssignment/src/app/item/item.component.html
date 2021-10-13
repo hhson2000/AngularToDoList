@@ -1,0 +1,16 @@
+<div class="w-75 mx-auto">
+    <div class="mt-3" *ngFor="let task of todoItem">
+        <!-- <div [class.fail]="!task.completed" [class.success]="task.completed" class="row p-2"> -->
+        <div class="row p-2 success">
+            <div class="col-12">
+                <span>{{task.title}}</span>
+                <span *ngIf="task.completed">&nbsp;(Completed)</span>
+                <span style="float: right;">
+                    <button type="button" class="btn btn-success btn-sm ml-5" 
+                    (click)="changeStatusTask(task)">Copleted</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="margin: 5px;" (click)="deleteItem(task)">Delete</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

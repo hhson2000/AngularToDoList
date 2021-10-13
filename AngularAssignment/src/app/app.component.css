@@ -1,0 +1,9 @@
+h4 {
+    display: grid;
+    justify-content: center;
+}
+
+p {
+    display: grid;
+    justify-content: center;
+}
